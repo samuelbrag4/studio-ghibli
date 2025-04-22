@@ -76,7 +76,7 @@ https://ghibliapi.vercel.app/films
 
 ## 🧑‍💻 Autor
 
-Desenvolvido por Seu Nome
+Desenvolvido por Eduardo Correia
 
 ---
 
