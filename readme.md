@@ -30,7 +30,7 @@ Aplicativo desenvolvido em **React Native com Expo Router** que consome dados da
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/studio-ghibli-app.git
+git clone https://github.com/Eduardo1985S/studio-ghibli.git
 cd studio-ghibli-app
 ```
 
