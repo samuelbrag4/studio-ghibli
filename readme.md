@@ -69,17 +69,3 @@ Você pode testar no celular com o app Expo Go ou emulador Android/iOS.
 https://ghibliapi.vercel.app/films
 
 ---
-
-## 📸 Preview
-
----
-
-## 🧑‍💻 Autor
-
-Desenvolvido por Eduardo Correia
-
----
-
-## 📃 Licença
-
-Este projeto está licenciado sob a licença MIT.
