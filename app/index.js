@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Importa dois hooks do React:
 // - useEffect: para rodar algo quando a tela carregar
 // - useState: para guardar dados e controlar o estado da tela
@@ -58,12 +59,50 @@ export default function Home() {
           keyExtractor={(item) => item.idMeal} // Usa o ID da receita como chave
           renderItem={({ item }) => <RecipeCard recipe={item} />} // Renderiza um RecipeCard passando a receita
           contentContainerStyle={styles.list} // Aplica o estilo na lista
+=======
+import { useEffect, useState } from "react";
+import { View, FlatList, SafeAreaView, StyleSheet, Text } from "react-native";
+import axios from "axios";
+import FilmCard from "../components/FilmCard";
+import SkeletonCard from "../components/SkeletonCard";
+
+export default function Home() {
+  const [films, setFilms] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      axios.get("https://ghibliapi.vercel.app/films")
+        .then((res) => setFilms(res.data))
+        .catch((err) => console.error(err))
+        .finally(() => setLoading(false));
+    }, 2000); // 2 segundos pra mostrar o Skeleton
+  }, []);
+
+  return (
+    <SafeAreaView style={styles.container}>
+      <Text style={styles.header}>🎥 Filmes Studio Ghibli</Text>
+      {loading ? (
+        <FlatList
+          data={[1, 2, 3, 4, 5]}
+          keyExtractor={(item) => item.toString()}
+          renderItem={() => <SkeletonCard />}
+          contentContainerStyle={styles.list}
+        />
+      ) : (
+        <FlatList
+          data={films}
+          keyExtractor={(item) => item.id}
+          renderItem={({ item }) => <FilmCard film={item} />}
+          contentContainerStyle={styles.list}
+>>>>>>> c1b41b7fb6da830879be05df86946922dc1fc08b
         />
       )}
     </SafeAreaView>
   );
 }
 
+<<<<<<< HEAD
 // Estilos visuais para os elementos da tela
 const styles = StyleSheet.create({
   container: {
@@ -82,3 +121,22 @@ const styles = StyleSheet.create({
     paddingBottom: 20, // Espaço embaixo da lista
   },
 });
+=======
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#121212",
+  },
+  header: {
+    fontSize: 28,
+    fontWeight: "bold",
+    color: "#ffffff",
+    textAlign: "center",
+    marginVertical: 16,
+  },
+  list: {
+    paddingHorizontal: 16,
+    paddingBottom: 20,
+  },
+});
+>>>>>>> c1b41b7fb6da830879be05df86946922dc1fc08b
