@@ -1,11 +1,41 @@
 {
   "name": "studio-ghibli",
   "version": "1.0.0",
+<<<<<<< HEAD
+  "main": "expo-router/entry",
+=======
   "main": "index.js",
+>>>>>>> c1b41b7fb6da830879be05df86946922dc1fc08b
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
+<<<<<<< HEAD
+    "web": "expo start --web",
+    "deploy": "npx expo export -p web && npx eas-cli@latest deploy"
+  },
+  "dependencies": {
+    "@react-navigation/native": "^7.1.8",
+    "@react-navigation/native-stack": "^7.3.12",
+    "axios": "^1.9.0",
+    "expo": "^53.0.4",
+    "expo-constants": "~17.1.4",
+    "expo-linear-gradient": "^14.1.4",
+    "expo-linking": "~7.1.4",
+    "expo-router": "~5.0.3",
+    "expo-splash-screen": "~0.30.7",
+    "expo-status-bar": "~2.2.3",
+    "moti": "^0.30.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "react-native": "0.79.1",
+    "react-native-gesture-handler": "~2.24.0",
+    "react-native-reanimated": "^3.17.5",
+    "react-native-safe-area-context": "5.3.0",
+    "react-native-screens": "~4.10.0",
+    "react-native-skeleton-placeholder": "^5.2.4",
+    "react-native-web": "^0.20.0"
+=======
     "web": "expo start --web"
   },
   "dependencies": {
@@ -23,6 +53,7 @@
     "react-native-skeleton-placeholder": "^5.2.4",
     "expo-linear-gradient": "~14.0.2",
     "react-native-web": "~0.19.13"
+>>>>>>> c1b41b7fb6da830879be05df86946922dc1fc08b
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
